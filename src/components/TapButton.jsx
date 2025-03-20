@@ -1,8 +1,8 @@
-export default function TapButton({children,onSelect}){
-    
+export default function TapButton({children,isSelected, ...props}){
+    console.log('Tap button component');
     return(
         <li>
-            <button onClick={onSelect}>{children}</button>
+            <button className={isSelected ? "active" : undefined} {...props}>{children}</button>
         </li>
     )
 }
